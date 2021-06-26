@@ -23,10 +23,11 @@ public class Main_0624_two {
     }
 }
 //  泛型中的通配符:
-//  T代表一种特定的类型  class A<T>
-//  E代表一种类型的意思,只不过通常代表集合中的元素 List<E>
+//  T代表一种特定的类型  class A<T>  Type:java类
+//  E代表一种类型的意思,只不过通常代表集合中的元素 List<E>  Element：集合中的元素
 //  ?是一种无限的符号,代表任何类型 Class<?> a=new Class()
-//
+//  K,V  key value
+//  静态方法和静态变量不能使用泛型所声明的变量
 class A<T, E> {
 
     private T t;
@@ -35,7 +36,10 @@ class A<T, E> {
         this.t = t;
         this.eList = aList;
     }
+    //泛型
+    public static <T> void aaa(){
 
+    }
 //    public void setT(T t){
 //        this.t=t;
 //    }
