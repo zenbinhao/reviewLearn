@@ -13,6 +13,9 @@ import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 
+//爬的一个动态新闻网站上的图片
+
+
 public class ImageScraper {
 
     public static void main(String[] args) {
