@@ -55,11 +55,7 @@ public class ImageScraper {
             urlCon = urlObj.openConnection();
             // 将HTML内容解析成UTF-8格式
             Document doc = Jsoup.parse(urlCon.getInputStream(), "utf-8", url);
-            // 提取电影图片所在的HTML代码块
-//            Elements elems = doc.getElementsByClass("url");
-//            Elements pic_block = elems.first().getElementsByTag("a");
-
-//            Elements elements = doc.getElementsByClass("root");
+            //获取标签里面的内容
             Elements allScript = doc.getElementsByTag("script");
             Element allDataList = allScript.get(3);
             String a = allDataList.data();
