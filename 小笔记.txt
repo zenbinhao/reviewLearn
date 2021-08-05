@@ -1,0 +1,30 @@
+第一次执行：select name,id from t2
+第二次执行：select id,name from t1 where other_column = ''
+第三次执行：selext id from t3
+第四次执行：select d1.name,t3.id
+第五次执行：union
+
+
+select  article_id  from t1 where category_id = 1 and count(comments)>1 order by views desc limit 1;
+用到：article_id
+条件：category_id    comments
+排序：views
+
+create index index_c on table(comments)
+create index index_cv on table(category_id,views)
+drop index index_c,index_cv on table
+
+inner join 内连接  交集
+full join
+
+union 并集
+
+唯一索引
+create unique index unique_card on table(card);
+
+select * from a  union select * form b
+
+select * from a left join b on a.card = b.card
+left join c on a.card = c.card
+create unique index unique_b_card on b(card)
+create unique index unique_c_card on c(card)
